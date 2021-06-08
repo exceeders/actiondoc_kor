@@ -102,7 +102,7 @@
    <details><summary> </summary>
    <p>
 
-   - Repo 설정 > Actions [메뉴](https://docs.github.com/en/enterprise-server@3.1/github/administering-a-repository/managing-repository-settings/disabling-or-limiting-github-actions-for-a-repository#enabling-workflows-for-private-repository-forks)
+   - Repo 설정 > Actions [메뉴](https://docs.github.com/en/enterprise-server@3.1/github/administering-a-repository/managing-repository-settings/disabling-or-limiting-github-actions-for-a-repository)
 
    </p>
    </details>
