@@ -41,12 +41,23 @@
 <p>
   
   ### 1. Instance에서 Actions/Packages 활성화 및 S3 blob storage 설정
-  ![image](https://user-images.githubusercontent.com/40287191/121130254-1edf3d00-c869-11eb-92a9-c257de7c6905.png)
+ 
+  <details><summary> </summary>
+  <p>
+   
+  ![image](https://user-images.githubusercontent.com/40287191/121136227-5f8e8480-c870-11eb-99cc-bfa11aade3f0.png) 
 
-  ![image](https://user-images.githubusercontent.com/40287191/121130276-256db480-c869-11eb-98b1-3abc986daf9b.png)
+  ![image](https://user-images.githubusercontent.com/40287191/121136144-471e6a00-c870-11eb-94b6-45c0f5bd4e02.png)
 
-    
+
+   </p>
+   </details>
+ 
   ### 2. GitHub Enterprise 레벨에서의 조직별 활성화/비활성화 설정 및 사용할 Actions 허용정책 설정
+ 
+   <details><summary> </summary>
+   <p>
+    
    - Enterprise 설정 > Policies > Actions [메뉴](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/enabling-github-actions-for-github-enterprise-server/enforcing-github-actions-policies-for-your-enterprise) 
    - 'Enable for all organizations' 또는 허용할 조직 선택
    - 허용할 Actions 타입 선택
@@ -54,14 +65,37 @@
      - Allow local actions only : Enterprise 내부의 저장소에 정의된 Actions들만 허용
      - Allow select actions : 선택된 Actions들만 허용
    
-   - Private folk로 부터의 Actions 허용
- 
-  ### 4. Org 레벨에서의 Actions 허용 정책 설정
-    - Org 설정 > Actions [메뉴](https://docs.github.com/en/enterprise-server@3.1/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization)
-  
-  ### 5. Repo 레벨에서의 Actions 허용 정책 설정
-    - Repo 설정 > Actions 메뉴
+   ![image](https://user-images.githubusercontent.com/40287191/121136603-cdd34700-c870-11eb-8257-9fc9f530b5d1.png)
 
+   - Private folk로 부터의 Pull Requests에 의한 Workflow 실행 허용
+  
+   ![image](https://user-images.githubusercontent.com/40287191/121136657-db88cc80-c870-11eb-8b21-ee6ca6d4eed7.png)
+
+   </p>
+   </details>
+ 
+  ### 3. Org 레벨에서의 Actions 허용 정책 설정
+ 
+  <details><summary> </summary>
+   <p>
+    
+   - Org 설정 > Actions [메뉴](https://docs.github.com/en/enterprise-server@3.1/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization)
+  
+   </p>
+   </details>
+ 
+  ### 4. Repo 레벨에서의 Actions 허용 정책 설정
+  
+   <details><summary> </summary>
+   <p>
+
+   - Repo 설정 > Actions [메뉴](https://docs.github.com/en/enterprise-server@3.1/github/administering-a-repository/managing-repository-settings/disabling-or-limiting-github-actions-for-a-repository#enabling-workflows-for-private-repository-forks)
+
+   </p>
+   </details>
+   
+   
+   
 </p>
 </details>
 
