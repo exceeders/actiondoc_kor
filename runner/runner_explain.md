@@ -134,7 +134,9 @@
  <details><summary> </summary>
  <p>
   
-  1. [지원되는 OS및 Architecture](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#supported-architectures-and-operating-systems-for-self-hosted-runners)
+  1. Self-hosted Runner는 별도 과금이 없습니다. 
+    
+  2. [지원되는 OS및 Architecture](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#supported-architectures-and-operating-systems-for-self-hosted-runners)
     
       Linux | Windows | MacOS | Architectures
       --|--|--|--
@@ -143,7 +145,7 @@
     
   <br/>
   
-  2. [Self-hosted Runner 계위](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#about-self-hosted-runners)
+  3. [Self-hosted Runner 계위](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#about-self-hosted-runners)
   
      - Self-hosted Runner는 아래와 같이 크게 3가지로 구성하여 사용할 수 있습니다. 
       
@@ -156,7 +158,7 @@
    
   <br/>
   
-  3. [Self-hosted Runner 추가](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/adding-self-hosted-runners)
+  4. [Self-hosted Runner 추가](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/adding-self-hosted-runners)
   
       - 저장소 settings메뉴 > Actions 
       - Organizations settings메뉴 > Actions
@@ -168,7 +170,7 @@
   
   <br/>
   
-  4. [Self-hosted Runner as a service](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/configuring-the-self-hosted-runner-application-as-a-service)
+  5. [Self-hosted Runner as a service](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/configuring-the-self-hosted-runner-application-as-a-service)
   
       - `systemd`을 사용하는 Linux 시스템에서 self-hosted runner 어플리케이션에 포함된 `svc.sh`스크립트를 실행
       - Runner 어플리케이션이 실행중이면 실행을 종료하고, `svc.sh` install
@@ -198,7 +200,7 @@
     
   <br/>
   
-  5. [러너를 그룹으로 묶어서 사용하기](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/managing-access-to-self-hosted-runners-using-groups)
+  6. [러너를 그룹으로 묶어서 사용하기](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/managing-access-to-self-hosted-runners-using-groups)
   
       - 여러개의 Self-hosted 러너들을 그룹으로 묶어서 Organization과 Enterprise 레벨에서 한꺼번에 여러 Self-hosted 러너들에 대한 접근 제어를 위해 사용
       - 예를들어, Organization에 러너 그룹을 만들고 특정 저장소들만 러너그룹에 할당하여 사용
@@ -209,14 +211,14 @@
 
   <br/>
   
-  6. [러너에 Label 붙여 사용하기](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/using-labels-with-self-hosted-runners)
+  7. [러너에 Label 붙여 사용하기](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/using-labels-with-self-hosted-runners)
     
      ![image](https://user-images.githubusercontent.com/40287191/121207836-8e2e4e80-c8b4-11eb-9d87-fef26c1f8336.png)
 
     
   <br/>
   
-  7. [Self-hosted Runner와 GHES사이의 Communication](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#communication-between-self-hosted-runners-and-github-enterprise-server)
+  8. [Self-hosted Runner와 GHES사이의 Communication](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#communication-between-self-hosted-runners-and-github-enterprise-server)
      - HTTPS 프로토콜을 통한 통신
      - Self Hosted Runner는 Jobs에 대한 정보를 주고받기 위해 GitHub과 통신
      - Self Hosted Runner에 “GitHub Action Runner Application”이 설치되어 실행되어야 GitHub으로 부터 Action의 Job들을 수신하여 실행 할 수 있음
@@ -224,7 +226,7 @@
     
   <br/>
   
-  8. [Self-hosted Runner security with Public repositories](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#self-hosted-runner-security-with-public-repositories)
+  9. [Self-hosted Runner security with Public repositories](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#self-hosted-runner-security-with-public-repositories)
   
       - 보안을 위해 Public repository들에서는 Self Hosted Runner의 사용이 권장되지 않음
   
