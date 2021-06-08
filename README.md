@@ -149,7 +149,18 @@
 <details><summary> </summary>
 <p>
  
+ ### 1. Actions를 구성하는 파일들
+ ### 2. Workflow 파일
+     
+     - Workflow 파일 템플릿
+     - Workflow 파일 구조
+     - Workflow 트리거 
+     
  
+ ### 3. Job과 Runner
+ 
+ ### 4. CodeQL Action-sync tool 사용
+
 </p>
 </details>
 
