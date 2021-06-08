@@ -12,7 +12,7 @@
 - Built-in secret store
 - Easy to write, easy to share
 
-# GHES Actions/Packages 를 구성하기 위해 필요한 것? 🤔
+# 1. GHES Actions/Packages 를 구성하기 위해 필요한 것? 🤔
 <details><summary> </summary>
 <p>
  
@@ -36,7 +36,7 @@
 </p>
 </details>
 
-# GHES Actions/Packages 설정 🛠️
+# 2. GHES Actions/Packages 설정 🛠️
 
 <details><summary> </summary>
 <p>
@@ -114,7 +114,24 @@
 </p>
 </details>
 
-# 
+<br/>
 
+# 3. Actions 구성요소
+
+### 1> Actions Runner 설명
+### 2> Minio NAS Gateway
+
+<br/>
+
+# 4. On-prem 사용을 위한 설정 및 인터넷 연결이 불가한 경우 사용방법
+
+### 1> GitHub.com의 Action 사용을 위해 Connect 설정 허용
+### 2> Connect및 Self-hosted 러너의 인터넷 연결이 불가한 경우, Action-sync tool 사용
+### 3> Tool Cache의 수동 패키지 다운로드
+### 4> CodeQL Action-sync tool 사용
+
+<br/>
+
+# 5. Actions의 작성
 
 ** 본 문서는 GitHub Enterprise Server 버젼 3.1을 기준으로 작성되었습니다. 
