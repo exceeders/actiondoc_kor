@@ -93,7 +93,8 @@
    <p>
     
    - Org 설정 > Actions [메뉴](https://docs.github.com/en/enterprise-server@3.1/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization)
-  
+   - Enterprise 레벨의 Actions 관련 정책 설정과 동일 : 허용할 Actions 설정 및 Private folk로 부터의 PR에 의한 워크플로우 실행
+    
    </p>
    </details>
  
@@ -103,6 +104,7 @@
    <p>
 
    - Repo 설정 > Actions [메뉴](https://docs.github.com/en/enterprise-server@3.1/github/administering-a-repository/managing-repository-settings/disabling-or-limiting-github-actions-for-a-repository)
+   - Enterprise 및 Org 레벨의 Actions 관련 정책 설정과 동일한 설정 : 허용할 Actions 설정 및 Private folk로 부터의 PR에 의한 워크플로우 실행
 
    </p>
    </details>
