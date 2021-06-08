@@ -70,7 +70,7 @@
      - 초과되는 사용량에 대해서 아래와 같이 분당 ⏰ 과금됩니다. 
      <img src="https://user-images.githubusercontent.com/40287191/121186647-48688a80-c8a2-11eb-9874-45fd40619203.png" width="550" height="150">
 
-     - 초과되는 사용량은 Admin page에서 확인 가능하며, _월별 최대사용한도_ 📊를 미리 정해 놓을 수 있습니다. 
+     - 초과되는 사용량은 Admin page에서 확인 가능 ([Organization](https://docs.github.com/en/billing/managing-billing-for-github-actions/viewing-your-github-actions-usage#viewing-github-actions-usage-for-your-organization), [Enterprise](https://docs.github.com/en/billing/managing-billing-for-github-actions/viewing-your-github-actions-usage#viewing-github-actions-usage-for-your-enterprise-account))하며, _월별 최대사용한도_ 📊를 미리 정해 놓을 수 있습니다. 
        - [사용량 계산 예시](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions#calculating-minute-and-storage-spending)
        - 월별사용한도 설정 : [Organization](https://docs.github.com/en/github/setting-up-and-managing-your-enterprise/setting-policies-for-organizations-in-your-enterprise-account/enforcing-github-actions-policies-in-your-enterprise-account#setting-the-permissions-of-the-github_token-for-your-enterprise), [Enterprise](https://docs.github.com/en/billing/managing-billing-for-github-actions/managing-your-spending-limit-for-github-actions#managing-the-spending-limit-for-github-actions-for-your-enterprise-account)
    
