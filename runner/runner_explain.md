@@ -232,3 +232,5 @@
   
   </p>
   </details> 
+
+[🔙](https://github.com/exceeders/Actions_gettingStarted/blob/main/README.md#2-minio-nas-gateway)
