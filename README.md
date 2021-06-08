@@ -64,7 +64,9 @@
    - 'Enable for all organizations' 또는 허용할 조직 선택
    <img src="https://user-images.githubusercontent.com/40287191/121139336-9ade8280-c873-11eb-8567-bcc028a8dfef.png" width="550" height="550">
 
-    
+  <br/>  
+  <br/>
+  <br/>  
     
   - 허용할 Actions 타입 선택
     
@@ -74,7 +76,9 @@
    
    <img src="https://user-images.githubusercontent.com/40287191/121136603-cdd34700-c870-11eb-8257-9fc9f530b5d1.png" width="800" height="500">
 
-    
+  <br/>  
+  <br/>
+  <br/>  
     
    - Private folk로 부터의 Pull Requests에 의한 Workflow 실행 허용
   
