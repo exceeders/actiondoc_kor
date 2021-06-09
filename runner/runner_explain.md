@@ -229,9 +229,10 @@
   9. [Self-hosted Runner security with Public repositories](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#self-hosted-runner-security-with-public-repositories)
   
       - 보안을 위해 Public repository들에서는 Self Hosted Runner의 사용이 권장되지 않음
-    ![image](https://user-images.githubusercontent.com/40287191/121277614-f3f9f500-c90b-11eb-94c7-d36bc4cc2f70.png)
+   
+       <img src="https://user-images.githubusercontent.com/40287191/121277614-f3f9f500-c90b-11eb-94c7-d36bc4cc2f70.png" width="600" height="150"> &nbsp; &nbsp; 
 
-    ![image](https://user-images.githubusercontent.com/40287191/121277586-dfb5f800-c90b-11eb-956a-9c6feb1a36cd.png)
+       <img src="https://user-images.githubusercontent.com/40287191/121277586-dfb5f800-c90b-11eb-956a-9c6feb1a36cd.png" width="300" height="200">
 
   
   </p>
