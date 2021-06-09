@@ -46,10 +46,10 @@
   <details><summary> </summary>
   <p>
    
-  ![image](https://user-images.githubusercontent.com/40287191/121136227-5f8e8480-c870-11eb-99cc-bfa11aade3f0.png) 
+  ![image](https://user-images.githubusercontent.com/40287191/121275294-4edd1d80-c907-11eb-9946-16f815db6537.png)
 
-  ![image](https://user-images.githubusercontent.com/40287191/121136144-471e6a00-c870-11eb-94b6-45c0f5bd4e02.png)
-
+   - **Force path style** 선택
+  ![image](https://user-images.githubusercontent.com/40287191/121275341-66b4a180-c907-11eb-8980-8505e1412b71.png)
 
    </p>
    </details>
@@ -70,9 +70,9 @@
     
   - 허용할 Actions 타입 선택
     
-    - Allow all actions : 모든 Actions 허용
-    - Allow local actions only : Enterprise 내부의 저장소에 정의된 Actions들만 허용
-    - Allow select actions : 선택된 Actions들만 허용
+   - Allow all actions : 모든 Actions 허용
+   - Allow local actions only : Enterprise 내부의 저장소에 정의된 Actions들만 허용
+   - Allow select actions : 선택된 Actions들만 허용
    
    <img src="https://user-images.githubusercontent.com/40287191/121136603-cdd34700-c870-11eb-8257-9fc9f530b5d1.png" width="800" height="500">
 
@@ -122,8 +122,17 @@
 <p>
  
 ### 1. [Actions Runner 설명](runner/runner_explain.md)
-### 2. Minio NAS Gateway
+### 2. [Minio Gateway for NAS Storage](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/enabling-github-actions-for-github-enterprise-server/enabling-github-actions-with-minio-gateway-for-nas-storage)
+ 
+   - Minio NAS Gateway는 [Docker를 이용해 쉽게 구성](https://docs.min.io/docs/minio-gateway-for-nas.html)이 가능합니다. 
+   
+   - 버킷 생성 후 GitHub Enterprise Server와 연동
+ 
+   - GitHub Enterprise Server가 HTTP Proxy Server와 연동되어 있다면, `localhost` 와 `127.0.0.1`을 `HTTP Proxy Exclusion list`에 추가
+ 
+     ![image](https://user-images.githubusercontent.com/40287191/121275451-b5623b80-c907-11eb-9e55-16fa98a478e2.png)
 
+ 
 </p>
 </details>
    
@@ -135,6 +144,7 @@
 <p>
  
 ### 1. GitHub.com의 Action 사용을 위해 Connect 설정 허용
+ 
 ### 2. Connect및 Self-hosted 러너의 인터넷 연결이 불가한 경우, Action-sync tool 사용
 ### 3. Tool Cache의 수동 패키지 다운로드
 ### 4. CodeQL Action-sync tool 사용
@@ -150,11 +160,12 @@
 <p>
  
  ### 1. Actions를 구성하는 파일들
+ 
  ### 2. Workflow 파일
      
-     - Workflow 파일 템플릿
-     - Workflow 파일 구조
-     - Workflow 트리거 
+   - Workflow 파일 템플릿
+   - Workflow 파일 구조
+   - Workflow 트리거 
      
  
  ### 3. Job과 Runner
