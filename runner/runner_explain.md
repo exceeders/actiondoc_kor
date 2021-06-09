@@ -228,7 +228,11 @@
   
   9. [Self-hosted Runner security with Public repositories](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#self-hosted-runner-security-with-public-repositories)
   
-      - 보안을 위해 Public repository들에서는 Self Hosted Runner의 사용이 권장되지 않음
+      - 보안을 위해 Public repository들에서는 Self Hosted Runner의 사용이 권장되지 않습니다. 
+    
+      - 처음 Org/Enterprise 레벨에 Self-hosted Runner를 추가하면 기본으로 생성된 'default' 러너그룹에 추가되는데, 이 러너그룹은 'public' 저장소를 포함하지 않도록 설정되어져 있습니다. 
+  
+      - Public저장소에 대해서도 사용하려면, 아래 그림과 같이 'public' 저장소를 포함하도록 하는 옵션을 체크하시면 됩니다. 
    
        <img src="https://user-images.githubusercontent.com/40287191/121277614-f3f9f500-c90b-11eb-94c7-d36bc4cc2f70.png" width="600" height="150"> &nbsp; &nbsp; 
 
