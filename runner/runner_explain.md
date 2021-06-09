@@ -213,6 +213,7 @@
   
   7. [러너에 Label 붙여 사용하기](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/using-labels-with-self-hosted-runners)
     
+     - 러너를 생성할 때, 혹은 생성된 러너에 대해 아래와 같이 UI메뉴에서 Label을 추가/수정 할 수 있습니다. 
      ![image](https://user-images.githubusercontent.com/40287191/121207836-8e2e4e80-c8b4-11eb-9d87-fef26c1f8336.png)
 
     
@@ -226,7 +227,17 @@
     
   <br/>
   
-  9. [Self-hosted Runner security with Public repositories](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#self-hosted-runner-security-with-public-repositories)
+  9. Self-hosted Runner의 인터넷 연결
+   
+     - Self-hosted Runner는 아래와 같은 용도로 인터넷 연결이 필요합니다. 
+       - Self-hosted Runner application update
+       - GitHub.com의 Actions download
+       - Toolcache (setup-node, setup-python, setup-java,,) Action들의 패키지 다운로드
+     - 
+  
+  <br/> 
+  
+  10. [Self-hosted Runner security with Public repositories](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#self-hosted-runner-security-with-public-repositories)
   
       - 보안을 위해 Public repository들에서는 Self Hosted Runner의 사용이 권장되지 않습니다. 
     
@@ -238,6 +249,9 @@
 
        <img src="https://user-images.githubusercontent.com/40287191/121277586-dfb5f800-c90b-11eb-956a-9c6feb1a36cd.png" width="300" height="200">
 
+   <br/>
+  
+   11. 사용량 최대치 limit
   
   </p>
   </details> 
