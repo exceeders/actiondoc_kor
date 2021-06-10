@@ -143,9 +143,18 @@
 <details><summary> </summary>
 <p>
  
-### 1. GitHub.com의 Action 사용을 위해 Connect 설정 허용
+### 1. [GitHub.com의 Action 사용을 위해 Connect 설정 허용](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/enabling-automatic-access-to-githubcom-actions-using-github-connect)
  
-### 2. Connect및 Self-hosted 러너의 인터넷 연결이 불가한 경우, Action-sync tool 사용
+ - GHES에서는 GitHub.com 또는 GitHub Marketplace의 Actions를 직접적으로 사용할 수 없으나, `GitHub Connect`를 이용해 [옵션을 허용](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/enabling-automatic-access-to-githubcom-actions-using-github-connect#enabling-automatic-access-to-all-githubcom-actions)해 주면 사용이 가능합니다. 
+  
+   ![image](https://user-images.githubusercontent.com/40287191/121316856-b1a0da00-c944-11eb-91d8-203ac1641481.png)
+
+### 2. [Connect및 Self-hosted 러너의 인터넷 연결이 불가한 경우, Action-sync tool 사용](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/manually-syncing-actions-from-githubcom)
+ 
+ - `actions-sync` tool을 사용하여 인터넷이 가능한 곳에서 Actions를 다운 받은 뒤, 온프렘의 저장소로 push할 수 있습니다. 
+ - GitHub.com으로 부터의 Pull과 내부로의 Push를 동시에 할 수도 있고, Pull이후에 별도로 Push를 진행 할 수도 있습니다. 
+ - 동시에 여러 저장소를 Sync하는,,?
+ 
 ### 3. Tool Cache의 수동 패키지 다운로드
 ### 4. CodeQL Action-sync tool 사용
 
