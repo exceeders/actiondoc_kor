@@ -145,7 +145,12 @@
 <details><summary> </summary>
 <p>
  
-### 1. [GitHub.com/Marketplace의 Action 사용을 위해 Connect 설정 허용](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/enabling-automatic-access-to-githubcom-actions-using-github-connect)
+### 1. GHES에는 기본 Actions들이 빌트인으로 포함되어 있습니다. 
+ 
+  - [빌트인 Actions Org설명](runner/builtin_actions_org.md) 
+ 
+ 
+### 2. [GitHub.com/Marketplace의 Action 사용을 위해 Connect 설정 허용](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/enabling-automatic-access-to-githubcom-actions-using-github-connect)
  
  - GHES에서는 GitHub.com 또는 GitHub Marketplace의 Actions를 직접적으로 사용할 수 없으나, `GitHub Connect`를 이용해 [옵션을 허용](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/enabling-automatic-access-to-githubcom-actions-using-github-connect#enabling-automatic-access-to-all-githubcom-actions)해 주면 사용이 가능합니다. 
  
@@ -153,9 +158,6 @@
   
    <img src="https://user-images.githubusercontent.com/40287191/121316856-b1a0da00-c944-11eb-91d8-203ac1641481.png" width="500" height="180">
 
-### 2. GHES에는 기본 Actions들이 빌트인으로 포함되어 있습니다. 
- 
-  - [빌트인 Actions Org설명](runner/builtin_actions_org.md) 
  
 ### 3. [Connect 설정 및 Self-hosted 러너의 인터넷 연결이 불가한 경우, Action-sync tool 사용](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/manually-syncing-actions-from-githubcom)
  
