@@ -17,7 +17,12 @@
 - 현재 [GitHub Marketplace에 8,000여개 이상의 Actions](https://github.com/marketplace?type=actions)들이 공유되어 있습니다. (Jun 2021 기준)
 
 <br/>
+<br/>
+<br/>
 
+# GitHub Actions/Packages의 GHES 설정 및 구성
+
+<br/>
 
 # 1. GHES Actions/Packages 를 구성하기 위해 필요한 것? 🤔
 <details><summary> </summary>
