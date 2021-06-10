@@ -135,8 +135,14 @@
  <p>
   
   1. Self-hosted Runner는 별도 과금이 없습니다. 
+  
+  2. Self-hosted Runner 어플리케이션
+  
+     - Self-hosted Runner를 GitHub Enterprise와 연결해 주는 어플리케이션 입니다. 
+     - 오픈소스이며, https://github.com/actions/runner 에서 보실 수 있습니다. 
+     - Self-hosted Runner 추가시, 화면에 보여지는 가이드의 순서데로 설치 진행 하면 됩니다. (아래 5.Self-hosted Runner 추가)
     
-  2. [지원되는 OS및 Architecture](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#supported-architectures-and-operating-systems-for-self-hosted-runners)
+  3. [지원되는 OS및 Architecture](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#supported-architectures-and-operating-systems-for-self-hosted-runners)
     
       Linux | Windows | MacOS | Architectures
       --|--|--|--
@@ -145,7 +151,7 @@
     
   <br/>
   
-  3. [Self-hosted Runner 계위](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#about-self-hosted-runners)
+  4. [Self-hosted Runner 계위](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#about-self-hosted-runners)
   
      - Self-hosted Runner는 아래와 같이 크게 3가지로 구성하여 사용할 수 있습니다. 
       
@@ -158,7 +164,7 @@
    
   <br/>
   
-  4. [Self-hosted Runner 추가](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/adding-self-hosted-runners)
+  5. [Self-hosted Runner 추가](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/adding-self-hosted-runners)
   
       - 저장소 settings메뉴 > Actions 
       - Organizations settings메뉴 > Actions
@@ -170,7 +176,7 @@
   
   <br/>
   
-  5. [Self-hosted Runner as a service](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/configuring-the-self-hosted-runner-application-as-a-service)
+  6. [Self-hosted Runner as a service](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/configuring-the-self-hosted-runner-application-as-a-service)
   
       - `systemd`을 사용하는 Linux 시스템에서 self-hosted runner 어플리케이션에 포함된 `svc.sh`스크립트를 실행
       - Runner 어플리케이션이 실행중이면 실행을 종료하고, `svc.sh` install
@@ -200,7 +206,7 @@
     
   <br/>
   
-  6. [러너를 그룹으로 묶어서 사용하기](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/managing-access-to-self-hosted-runners-using-groups)
+  7. [러너를 그룹으로 묶어서 사용하기](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/managing-access-to-self-hosted-runners-using-groups)
   
       - 여러개의 Self-hosted 러너들을 그룹으로 묶어서 Organization과 Enterprise 레벨에서 한꺼번에 여러 Self-hosted 러너들에 대한 접근 제어를 위해 사용
       - 예를들어, Organization에 러너 그룹을 만들고 특정 저장소들만 러너그룹에 할당하여 사용
@@ -211,7 +217,7 @@
 
   <br/>
   
-  7. [러너에 Label 붙여 사용하기](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/using-labels-with-self-hosted-runners)
+  8. [러너에 Label 붙여 사용하기](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/using-labels-with-self-hosted-runners)
     
      - 러너를 생성할 때, 혹은 생성된 러너에 대해 아래와 같이 UI메뉴에서 Label을 추가/수정 할 수 있습니다. 
      ![image](https://user-images.githubusercontent.com/40287191/121207836-8e2e4e80-c8b4-11eb-9d87-fef26c1f8336.png)
@@ -219,7 +225,7 @@
     
   <br/>
   
-  8. [Self-hosted Runner와 GHES사이의 Communication](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#communication-between-self-hosted-runners-and-github-enterprise-server)
+  9. [Self-hosted Runner와 GHES사이의 Communication](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#communication-between-self-hosted-runners-and-github-enterprise-server)
      - HTTPS 프로토콜을 통한 통신
      - Self Hosted Runner는 Jobs에 대한 정보를 주고받기 위해 GitHub과 통신
      - Self Hosted Runner에 “GitHub Action Runner Application”이 설치되어 실행되어야 GitHub으로 부터 Action의 Job들을 수신하여 실행 할 수 있음
@@ -227,7 +233,7 @@
     
   <br/>
   
-  9. Self-hosted Runner의 인터넷 연결
+  10. Self-hosted Runner의 인터넷 연결
    
      - Self-hosted Runner는 아래와 같은 용도로 인터넷 연결이 필요합니다. 
        - Self-hosted Runner application update
@@ -236,8 +242,13 @@
      - Self-hosted Runner가 인터넷 연결이 불가할 시, 인터넷이 가능한 곳에서 다운로드하여 [수동으로 사용할 수 있는 방법](https://github.com/exceeders/Actions_gettingStarted#4-on-prem-%EC%82%AC%EC%9A%A9%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%84%A4%EC%A0%95-%EB%B0%8F-%EC%9D%B8%ED%84%B0%EB%84%B7-%EC%97%B0%EA%B2%B0%EC%9D%B4-%EB%B6%88%EA%B0%80%ED%95%9C-%EA%B2%BD%EC%9A%B0-%EC%82%AC%EC%9A%A9%EB%B0%A9%EB%B2%95)을 제공합니다.
   
   <br/> 
+  11. [Self-hosted Runner 어플리케이션의 업그레이드](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners#about-self-hosted-runners)
   
-  10. [Self-hosted Runner security with Public repositories](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#self-hosted-runner-security-with-public-repositories)
+     - Self-hosted Runner 어플리케이션은 새로운 버젼이 출시되면, Job이 러너에 할당 될 때 자동으로 업데이트 합니다.
+     - Job이 할당되지 않더라도 새로운 버젼 출시 후 1주일 이내에 자동으로 업데이트 됩니다. 
+  
+  <br/> 
+  12. [Self-hosted Runner security with Public repositories](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#self-hosted-runner-security-with-public-repositories)
   
       - 보안을 위해 Public repository들에서는 Self Hosted Runner의 사용이 권장되지 않습니다. 
     
@@ -251,7 +262,19 @@
 
    <br/>
   
-   11. 사용량 최대치 limit
+   13. Self-hosted Runner는 30일 이상 GitHub Action과 연결되지 않으면 [자동으로 삭제됩니다](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners#about-self-hosted-runners). 
+  
+   14. 사용량 최대치 limit
+  
+        항목 | 최대치
+        --|--
+        Workflow run time | 72시간
+        API requests | 1000 request /1시간 (한 저정소내 전체 Actions에 대해)
+        Job matrix | 256 job /워크플로우
+        Workflow run queue | 저장소 당 10초에 최대 100개 워크 플로우
+        Job queue time | 각 job은 최대 24시간 동안 큐에 대기
+  
+      * 표의 값들은 변경될 수 있습니다. 
   
   </p>
   </details> 
