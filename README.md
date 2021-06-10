@@ -12,7 +12,7 @@
 - Built-in secret store
 - Easy to write, easy to share
 
-# GitHub Actions는 커뮤니티 기반으로 함께 성장합니다. 
+# :octocat: GitHub Actions는 커뮤니티 🧑‍🤝‍🧑 기반으로 함께 성장합니다. 
 - GitHub Actions는 큰 특징 중 하나는 커뮤니티 기반이라는 점 입니다. Actions들이 커뮤니티에 공유되어 있고, 필요한 Actions들을 검색하여 찾아 선언만으로 쉽게 사용할 수 있습니다. 
 - 현재 [GitHub Marketplace에 8,000여개 이상의 Actions](https://github.com/marketplace?type=actions)들이 공유되어 있습니다. (Jun 2021 기준)
 
@@ -20,7 +20,7 @@
 <br/>
 <br/>
 
-# GitHub Actions/Packages의 GHES 설정 및 사용 🎯
+# 🎯 GitHub Actions/Packages의 GHES 설정 및 사용 
 
 <br/>
 
@@ -134,7 +134,7 @@
 <details><summary> </summary>
 <p>
  
-### 1. [Actions Runner 설명](runner/runner_explain.md)
+### 1. [Actions Runner 설명](runner/runner_explain.md) 🏃
 ### 2. [Minio Gateway for NAS Storage](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/enabling-github-actions-for-github-enterprise-server/enabling-github-actions-with-minio-gateway-for-nas-storage)
  
    - Minio NAS Gateway는 [Docker를 이용해 쉽게 구성](https://docs.min.io/docs/minio-gateway-for-nas.html)이 가능합니다. 
@@ -157,7 +157,7 @@
 <details><summary> </summary>
 <p>
  
-### 1. GHES에는 기본 Actions들이 빌트인으로 포함되어 있습니다. 
+### 1. GHES에는 기본 Actions들이 빌트인 📥 으로 포함되어 있습니다. 
  
   - [빌트인 Actions Org설명](runner/builtin_actions_org.md) 
  
