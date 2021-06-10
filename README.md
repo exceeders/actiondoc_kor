@@ -49,7 +49,7 @@
   ![image](https://user-images.githubusercontent.com/40287191/121275294-4edd1d80-c907-11eb-9946-16f815db6537.png)
 
    - **Force path style** 선택
-  ![image](https://user-images.githubusercontent.com/40287191/121275341-66b4a180-c907-11eb-8980-8505e1412b71.png)
+  ![image](https://user-images.githubusercontent.com/40287191/121549627-fc0b7f00-ca48-11eb-80d5-fa7813baeed8.png)
 
    </p>
    </details>
