@@ -140,24 +140,48 @@
 <br/>
 
 
-# 4. On-prem 사용을 위한 설정 및 인터넷 연결이 불가한 경우 사용방법
+# 4. On-prem에서 GitHub.com/Marketplace의 Actions 사용을 위한 설정 및 인터넷 연결이 불가한 경우 사용방법
 
 <details><summary> </summary>
 <p>
  
-### 1. [GitHub.com의 Action 사용을 위해 Connect 설정 허용](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/enabling-automatic-access-to-githubcom-actions-using-github-connect)
+### 1. [GitHub.com/Marketplace의 Action 사용을 위해 Connect 설정 허용](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/enabling-automatic-access-to-githubcom-actions-using-github-connect)
  
  - GHES에서는 GitHub.com 또는 GitHub Marketplace의 Actions를 직접적으로 사용할 수 없으나, `GitHub Connect`를 이용해 [옵션을 허용](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/enabling-automatic-access-to-githubcom-actions-using-github-connect#enabling-automatic-access-to-all-githubcom-actions)해 주면 사용이 가능합니다. 
   
-   ![image](https://user-images.githubusercontent.com/40287191/121316856-b1a0da00-c944-11eb-91d8-203ac1641481.png)
+   <img src="https://user-images.githubusercontent.com/40287191/121316856-b1a0da00-c944-11eb-91d8-203ac1641481.png" width="500" height="180">
 
-### 2. [Connect및 Self-hosted 러너의 인터넷 연결이 불가한 경우, Action-sync tool 사용](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/manually-syncing-actions-from-githubcom)
+### 2. GHES에는 기본 Actions들이 빌트인으로 포함되어 있습니다. 
+ 
+ - GHES 인스턴스가 설치되면 자동으로 내부에 'actions'라는 Org가 생성되어 있고, 이 Org에 다양한 Action들이 포함되어 있습니다. 이 Actions들은 https://github.com/actions 에 있는 Actions들이 GitHub Enterprise 설치 버젼에 포함된 것입니다(해당버젼이 빌드될 때의 특정시점). 
+
+ - 워크 플로우에서 사용할 Action을 선언할 때 `uses: actions/setup-node@v1` 과 같이 선언하면 기본적으로 빌트인된 'actions' Org에 있는 Actions들을 사용하게 됩니다.
+ 
+ - 이와 같이, Actions는 먼저 GHES내부에 있는 '조직명/저장소명'을 가진 Actions를 먼저 찾고, 만약 없다면 이후 위 1항에 설정된 GitHub Connect를 통해 외부의 Actions를 찾습니다. 
+ 
+ - GHES 인스턴스에 포함된 Actions들은 https://github.com/actions 의 내용이 업데이트 되어도 자동으로 동기화 되지 않습니다. 
+ 
+ - 이 Actions들에 대한 최신 업데이트된 내용을 사용하기 위해서는 아래와 같이 두가지 방법이 있습니다. 
+ 
+    - GHES내부에 빌트인된 'actions' 조직의 저장소를 삭제 
+    
+       - 'actions' 조직의 저장소를 삭제하기 위해서는 'actions' 조직의 owner가 되어야 하며, 'actions' 조직의 owner는 default로 `actions_admin` 이라는 기본 owner가 있으나, [site admin이 추가로 owner를 지정]([https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/manually-syncing-actions-from-githubcom#prerequisitesadmin)할 수 있습니다. 
+   
+    - 또는 아래 3.항에서 설명되는 `Actions-sync tool`을 사용
+ 
+ 
+### 3. [Connect및 Self-hosted 러너의 인터넷 연결이 불가한 경우, Action-sync tool 사용](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/manually-syncing-actions-from-githubcom)
  
  - `actions-sync` tool을 사용하여 인터넷이 가능한 곳에서 Actions를 다운 받은 뒤, 온프렘의 저장소로 push할 수 있습니다. 
- - GitHub.com으로 부터의 Pull과 내부로의 Push를 동시에 할 수도 있고, Pull이후에 별도로 Push를 진행 할 수도 있습니다. 
+ - GitHub.com으로 부터의 Pull과 내부로의 Push를 동시에 할 수도 있고 (`action-sync sync`), Pull이후에 별도로 Push를 진행 할 수도 있습니다(`action-sync pull`, `action-sync push`). 
+ 
+   ```
+ - GitHub.com으로 부터의 Pull과 내부로의 Push를 동시에 할 수도 있고 (`action-sync sync`), Pull이후에 별도로 Push를 진행 할 수도 있습니다(`action-sync pull`, `action-sync push`). 
  - 동시에 여러 저장소를 Sync하는,,?
  
 ### 3. Tool Cache의 수동 패키지 다운로드
+ 
+ 
 ### 4. CodeQL Action-sync tool 사용
 
 </p>
