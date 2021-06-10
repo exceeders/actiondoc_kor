@@ -12,6 +12,11 @@
 - Built-in secret store
 - Easy to write, easy to share
 
+# GitHub Actions는 커뮤니티 기반으로 함께 성장합니다. 
+- GitHub Actions는 큰 특징 중 하나는 커뮤니티 기반이라는 점 입니다. Actions들이 커뮤니티에 공유되어 있고 필요한 Actions들을 검색하여 찾아 선언만으로 쉽게 사용할 수 있습니다. 
+- 현재 [GitHub Marketplace에 8,000여개 이상의 Actions](https://github.com/marketplace?type=actions)들이 공유되어 있습니다. (Jun 2021 기준)
+- 
+
 # 1. GHES Actions/Packages 를 구성하기 위해 필요한 것? 🤔
 <details><summary> </summary>
 <p>
@@ -117,7 +122,7 @@
 <br/>
 
 
-# 3. Actions 구성요소
+# 3. Actions 구성요소 🤖
 
 <details><summary> </summary>
 <p>
@@ -183,7 +188,7 @@
 <br/>
 
 
-# 5. Actions의 작성
+# 5. Actions의 작성 ✍️
 
 <details><summary> </summary>
 <p>
