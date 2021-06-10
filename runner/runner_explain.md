@@ -117,7 +117,7 @@
         --|--
         Job Execution time | 6시간
         Workflow run time | 72시간
-        API requests | 1000 request /1시간 (전체 Actions에 대해)
+        API requests | 1000 request /1시간 (한 저장소내 전체 Actions에 대해)
         Concurrent jobs | 180개, MacOS는 50개
         Job matrix | 256 job /워크플로우
         Workflow run queue | 저장소 당 10초에 최대 100개 워크 플로우
