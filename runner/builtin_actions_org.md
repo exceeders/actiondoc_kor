@@ -23,3 +23,5 @@
    
     - 또는 아래 3.항에서 설명되는 `Actions-sync tool`을 사용
  
+
+[🔙](https://github.com/exceeders/Actions_gettingStarted/blob/main/README.md#2-ghes%EC%97%90%EB%8A%94-%EA%B8%B0%EB%B3%B8-actions%EB%93%A4%EC%9D%B4-%EB%B9%8C%ED%8A%B8%EC%9D%B8%EC%9C%BC%EB%A1%9C-%ED%8F%AC%ED%95%A8%EB%90%98%EC%96%B4-%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4)
