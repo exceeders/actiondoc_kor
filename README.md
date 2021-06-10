@@ -155,7 +155,7 @@
 
 ### 2. GHES에는 기본 Actions들이 빌트인으로 포함되어 있습니다. 
  
-  - [빌트인 Actions Org](runner/builtin_actions_org.md) 
+  - [빌트인 Actions Org설명](runner/builtin_actions_org.md) 
  
 ### 3. [Connect 설정 및 Self-hosted 러너의 인터넷 연결이 불가한 경우, Action-sync tool 사용](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/manually-syncing-actions-from-githubcom)
  
