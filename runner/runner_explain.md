@@ -2,7 +2,7 @@
 - GitHub Actions의 Runner는 GitHub-hosted runner와 Self-hosted runner 두 가지가 있습니다. 
 - GitHub-hosted runner는 GitHub에서 Hosting하여 서비스 하는 러너입니다. 
 - Self-hosted runner는 Enterprise에서 직접 Compute자원을 준비하여 실행하는 러너 입니다.
-- 현재 GHES 3.0/3.1에서는 **Self-hosted Runner만 지원됩니다. **
+- 현재 GHES 3.0/3.1에서는 **Self-hosted Runner만 지원됩니다.**
 
 <img src="https://user-images.githubusercontent.com/40287191/121185766-5f5aad00-c8a1-11eb-9af2-57ef2ec38254.png">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://user-images.githubusercontent.com/40287191/121161933-6b864080-c888-11eb-87a4-eae91b4a7210.png">  
 
