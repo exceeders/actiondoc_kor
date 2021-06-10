@@ -242,20 +242,24 @@
       - Self-hosted Runner가 인터넷 연결이 불가할 시, 인터넷이 가능한 곳에서 다운로드하여 [수동으로 사용할 수 있는 방법](https://github.com/exceeders/Actions_gettingStarted#4-on-prem-%EC%82%AC%EC%9A%A9%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%84%A4%EC%A0%95-%EB%B0%8F-%EC%9D%B8%ED%84%B0%EB%84%B7-%EC%97%B0%EA%B2%B0%EC%9D%B4-%EB%B6%88%EA%B0%80%ED%95%9C-%EA%B2%BD%EC%9A%B0-%EC%82%AC%EC%9A%A9%EB%B0%A9%EB%B2%95)을 제공합니다.
   
   <br/> 
+  
+  
   11. [Self-hosted Runner 어플리케이션의 업그레이드](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners#about-self-hosted-runners)
      
-  - Self-hosted Runner 어플리케이션은 새로운 버젼이 출시되면, Job이 러너에 할당 될 때 자동으로 업데이트 합니다.
+      - Self-hosted Runner 어플리케이션은 새로운 버젼이 출시되면, Job이 러너에 할당 될 때 자동으로 업데이트 합니다.
       
-  - Job이 할당되지 않더라도 새로운 버젼 출시 후 1주일 이내에 자동으로 업데이트 됩니다. 
+      - Job이 할당되지 않더라도 새로운 버젼 출시 후 1주일 이내에 자동으로 업데이트 됩니다. 
   
   <br/> 
+  
+ 
   12. [Self-hosted Runner security with Public repositories](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/about-self-hosted-runners#self-hosted-runner-security-with-public-repositories)
   
-   - 보안을 위해 Public repository들에서는 Self Hosted Runner의 사용이 권장되지 않습니다. 
+      - 보안을 위해 Public repository들에서는 Self Hosted Runner의 사용이 권장되지 않습니다. 
 
-   - 처음 Org/Enterprise 레벨에 Self-hosted Runner를 추가하면 기본으로 생성된 'default' 러너그룹에 추가되는데, 이 러너그룹은 'public' 저장소를 포함하지 않도록 설정되어져 있습니다. 
+      - 처음 Org/Enterprise 레벨에 Self-hosted Runner를 추가하면 기본으로 생성된 'default' 러너그룹에 추가되는데, 이 러너그룹은 'public' 저장소를 포함하지 않도록 설정되어져 있습니다. 
 
-   - Public저장소에 대해서도 사용하려면, 아래 그림과 같이 'public' 저장소를 포함하도록 하는 옵션을 체크하시면 됩니다. 
+      - Public저장소에 대해서도 사용하려면, 아래 그림과 같이 'public' 저장소를 포함하도록 하는 옵션을 체크하시면 됩니다. 
 
         <img src="https://user-images.githubusercontent.com/40287191/121277614-f3f9f500-c90b-11eb-94c7-d36bc4cc2f70.png" width="600" height="150"> &nbsp; &nbsp; 
 
@@ -264,6 +268,8 @@
    <br/>
   
    13. Self-hosted Runner는 30일 이상 GitHub Action과 연결되지 않으면 [자동으로 삭제됩니다](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners#about-self-hosted-runners). 
+  
+  <br/>
   
    14. [사용량 최대치 limit](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners#usage-limits)
   
