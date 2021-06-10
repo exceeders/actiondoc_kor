@@ -73,7 +73,7 @@
     
    - Enterprise 설정 > Policies > Actions [메뉴](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/enabling-github-actions-for-github-enterprise-server/enforcing-github-actions-policies-for-your-enterprise) 
    
-   - 'Enable for all organizations' 또는 허용할 조직 선택
+   - 'Enable for all organizations' 또는 허용할 조직 👫 선택
    <img src="https://user-images.githubusercontent.com/40287191/121139336-9ade8280-c873-11eb-8567-bcc028a8dfef.png" width="600" height="550">
 
   <br/>  
@@ -135,7 +135,7 @@
 <p>
  
 ### 1. [Actions Runner 설명](runner/runner_explain.md) 🏃
-### 2. [Minio Gateway for NAS Storage](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/enabling-github-actions-for-github-enterprise-server/enabling-github-actions-with-minio-gateway-for-nas-storage)
+### 2. [Minio Gateway for NAS Storage](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/enabling-github-actions-for-github-enterprise-server/enabling-github-actions-with-minio-gateway-for-nas-storage) 🧺
  
    - Minio NAS Gateway는 [Docker를 이용해 쉽게 구성](https://docs.min.io/docs/minio-gateway-for-nas.html)이 가능합니다. 
    
