@@ -180,7 +180,7 @@
   - GitHub Enterprise의 Code Scanning은 정적분석을 수행하는 GitHub Enterprise의 Advanced Security 기능입니다. 
   - GitHub Actions를 바탕으로 개발의 워크 플로우에 자동화된 절차로 수행되며, 이를 통해 소프트웨어 개발 주기의 가장 빠른 단계에서 보안을 수행하는 shift left의 실질적인 워크 플로우가 이루어집니다. 
   - Code Scanning은 CodeQL이라고 하는 보안 분석의 핵심 쿼리엔진이 Action으로 수행되며, 이것 역시 GHES설치 시 기본적으로 내부에 빌트인으로 포함되어 있습니다. 
-  - 인터넷에 연결되어 있지 않다면, 동기화를 수동으로 수행하는 별도의 sync tool(https://github.com/github/codeql-action-sync-tool)을 사용해 동기화 할 수 있습니다. 
+  - 인터넷에 연결되어 있지 않다면, 동기화를 수동으로 수행하는 별도의 sync tool(https://github.com/github/codeql-action-sync-tool) 을 사용해 동기화 할 수 있습니다. 
 
 </p>
 </details>
