@@ -182,7 +182,12 @@
   - GitHub.com에서 워크플로우를 실행하여 tool cache를 가져온 뒤, 이것을 artifact로 업로드 합니다. 이것을 다운로드하여 Self-hosted Runner에 밀어 넣어 사용합니다. 
   - [예시](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/setting-up-the-tool-cache-on-self-hosted-runners-without-internet-access#populating-the-tool-cache-for-a-self-hosted-runner)
  
-### 4. CodeQL Action-sync tool 사용 (참조)
+### 4. [CodeQL Action-sync tool 사용](https://docs.github.com/en/enterprise-server@3.1/admin/advanced-security/configuring-code-scanning-for-your-appliance#configuring-codeql-analysis-on-a-server-without-internet-access) (참고)
+ 
+  - GitHub Enterprise의 Code Scanning은 정적분석을 수행하는 GitHub Enterprise의 Advanced Security 기능입니다. 
+  - GitHub Actions를 
+  - GitHub Enterprise의 Code Scanning은 정적분석을 수행하는 GitHub Enterprise의 Advanced Security 기능입니다. ㅂㅏ
+  - GitHub Enterprise의 Code Scanning은 정적분석을 수행하는 GitHub Enterprise의 Advanced Security 기능입니다. 
 
 </p>
 </details>
