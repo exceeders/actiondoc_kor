@@ -159,7 +159,7 @@
  
 ### 3. [Connect 설정 및 Self-hosted 러너의 인터넷 연결이 불가한 경우, Action-sync tool 사용](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/manually-syncing-actions-from-githubcom)
  
-  - [Action-sync-tool](runner/action-sync-tool.md)
+  - [Action-sync-tool 설명](runner/action-sync-tool.md)
  
 ### 4. [Tool Cache(`actions/setup-LANGUAGE`)의 수동 패키지 다운로드](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/setting-up-the-tool-cache-on-self-hosted-runners-without-internet-access)
  
