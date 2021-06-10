@@ -20,7 +20,7 @@
 <br/>
 <br/>
 
-# GitHub Actions/Packages의 GHES 설정 및 구성
+# GitHub Actions/Packages의 GHES 설정 및 사용 🎯
 
 <br/>
 
