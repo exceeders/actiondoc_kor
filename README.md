@@ -82,9 +82,9 @@
     
   - 허용할 Actions 타입 선택
     
-   - Allow all actions : 모든 Actions 허용
-   - Allow local actions only : Enterprise 내부의 저장소에 정의된 Actions들만 허용
-   - Allow select actions : 선택된 Actions들만 허용
+     - Allow all actions : 모든 Actions 허용
+     - Allow local actions only : Enterprise 내부의 저장소에 정의된 Actions들만 허용
+     - Allow select actions : 선택된 Actions들만 허용
    
    <img src="https://user-images.githubusercontent.com/40287191/121136603-cdd34700-c870-11eb-8257-9fc9f530b5d1.png" width="800" height="500">
 
