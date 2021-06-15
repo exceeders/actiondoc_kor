@@ -21,7 +21,7 @@
     
        - 'actions' 조직의 저장소를 삭제하기 위해서는 'actions' 조직의 owner가 되어야 하며, 'actions' 조직의 owner는 default로 `actions_admin` 이라는 기본 owner가 있으나, [site admin이 추가로 owner를 지정](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/manually-syncing-actions-from-githubcom#prerequisitesadmin)할 수 있습니다. 
    
-    - 또는 아래 3.항에서 설명되는 `Actions-sync tool`을 사용
+    - 또는 [3.항](https://github.com/exceeders/Actions_GHES_gettingStarted#3-connect-%EC%84%A4%EC%A0%95-%EB%B0%8F-self-hosted-%EB%9F%AC%EB%84%88%EC%9D%98-%EC%9D%B8%ED%84%B0%EB%84%B7-%EC%97%B0%EA%B2%B0%EC%9D%B4-%EB%B6%88%EA%B0%80%ED%95%9C-%EA%B2%BD%EC%9A%B0-action-sync-tool-%EC%82%AC%EC%9A%A9)에서 설명되는 `Actions-sync tool`을 사용
  
 
 [🔙](https://github.com/exceeders/Actions_gettingStarted/blob/main/README.md#2-ghes%EC%97%90%EB%8A%94-%EA%B8%B0%EB%B3%B8-actions%EB%93%A4%EC%9D%B4-%EB%B9%8C%ED%8A%B8%EC%9D%B8%EC%9C%BC%EB%A1%9C-%ED%8F%AC%ED%95%A8%EB%90%98%EC%96%B4-%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4)
