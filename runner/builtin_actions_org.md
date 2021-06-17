@@ -17,7 +17,7 @@
  
  - 이 Actions들에 대한 최신 업데이트된 내용을 사용하기 위해서는 아래와 같이 **두가지 방법**이 있습니다. 
  
-    - GHES내부에 빌트인된 'actions' 조직의 저장소를 삭제 
+    - GHES내부에 빌트인된 'actions' 조직의 저장소를 삭제 (GitHub Connect 설정필요) 
     
        - 'actions' 조직의 저장소를 삭제하기 위해서는 'actions' 조직의 owner가 되어야 하며, 'actions' 조직의 owner는 default로 `actions_admin` 이라는 기본 owner가 있으나, [site admin이 추가로 owner를 지정](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/manually-syncing-actions-from-githubcom#prerequisitesadmin)할 수 있습니다. 
    
