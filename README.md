@@ -129,7 +129,7 @@
 <br/>
 
 
-# 3. Actions 구성요소 🤖
+# 3. GHES Actions 을 위한 구성요소 설명 🤖
 
 <details><summary> </summary>
 <p>
@@ -195,28 +195,8 @@
 <br/>
 
 
-# 5. Actions의 작성 ✍️ (작성중 🚧)
+# 5. [Actions의 작성 ](https://github.com/exceeders/howto_Actions)✍️ 
 
-<details><summary> </summary>
-<p>
- 
- ### 1. Actions를 구성하는 파일들
- 
- ### 2. Workflow 파일
-     
-   - Workflow 파일 템플릿
-   - Workflow 파일 구조
-   - Workflow 트리거 
-     
- 
- ### 3. Job과 Runner
- 
- ### 4. CodeQL Action-sync tool 사용
-
-</p>
-</details>
-
-<br/>
 
  
 ** 본 문서는 GitHub Enterprise Server 버젼 3.1을 기준으로 작성되었습니다. 
