@@ -68,13 +68,13 @@
      - GitHub Enterprise는 기본적으로 **월별 50,000분/50GB Storage**가 포함되어 있습니다. 
    
      - 초과되는 사용량에 대해서 아래와 같이 분당 ⏰ 과금됩니다. 
-     <img src="https://user-images.githubusercontent.com/40287191/121186647-48688a80-c8a2-11eb-9874-45fd40619203.png" width="550" height="150">
+     <img src="https://user-images.githubusercontent.com/40287191/121186647-48688a80-c8a2-11eb-9874-45fd40619203.png" width="650" height="150">
 
      - 초과되는 사용량은 Admin page에서 확인 가능 ([Organization](https://docs.github.com/en/billing/managing-billing-for-github-actions/viewing-your-github-actions-usage#viewing-github-actions-usage-for-your-organization), [Enterprise](https://docs.github.com/en/billing/managing-billing-for-github-actions/viewing-your-github-actions-usage#viewing-github-actions-usage-for-your-enterprise-account))하며, _월별 최대사용한도_ 📊를 미리 정해 놓을 수 있습니다. 
        - [사용량 계산 예시](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions#calculating-minute-and-storage-spending)
        - 월별사용한도 설정 : [Organization](https://docs.github.com/en/github/setting-up-and-managing-your-enterprise/setting-policies-for-organizations-in-your-enterprise-account/enforcing-github-actions-policies-in-your-enterprise-account#setting-the-permissions-of-the-github_token-for-your-enterprise), [Enterprise](https://docs.github.com/en/billing/managing-billing-for-github-actions/managing-your-spending-limit-for-github-actions#managing-the-spending-limit-for-github-actions-for-your-enterprise-account)
    
-       <img src="https://user-images.githubusercontent.com/40287191/121212009-eadf3880-c8b7-11eb-8742-84f2ec094047.png" width="550" height="200">
+       <img src="https://user-images.githubusercontent.com/40287191/121212009-eadf3880-c8b7-11eb-8742-84f2ec094047.png" width="700" height="250">
 
      - 초과 사용량에 대해서만 월별 결재, 또는 사전에 일정량을 Pre-paid로 구매 가능합니다. 
   
@@ -86,7 +86,7 @@
      
      - 아래의 표와 같이 [지원되는 OS](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources)가 있습니다. 
     
-      <img src="https://user-images.githubusercontent.com/40287191/121195196-5ae6c200-c8aa-11eb-8bcb-5648f677d4e6.png" width="500" height="250">
+      <img src="https://user-images.githubusercontent.com/40287191/121195196-5ae6c200-c8aa-11eb-8bcb-5648f677d4e6.png" width="450" height="250">
 
 
    <br/>
