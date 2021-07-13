@@ -48,6 +48,8 @@
 </p>
 </details>
 
+<br/>
+
 # 2. GHES Actions/Packages 설정 🛠️
 
 <details><summary> </summary>
@@ -198,5 +200,130 @@
 # 5. [Actions의 작성 ](https://github.com/exceeders/howto_Actions)✍️ 
 
 
+<br/>
+
+# 6. Actions 이중화, 백업
+
+<details><summary> </summary>
+<p>
+
+### [1. GitHub Actions 이중화](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/advanced-configuration-and-troubleshooting/high-availability-for-github-actions)   
+   
+   - GitHub Enterprise Server 자체의 백업과 이중화 구성은, Action이 사용하는 외부 S3 blob 스토리지(Azure, Amazon, MinIO)의 백업과 이중화와는 **제공하지 않습니다**. 
  
+   - 외부 S3 blob 스토리지에서 제공하는 이중화 및 백업에 의존하며, 이러한 스토리지 서비스의 데이터 이중화와 replication에 대한 구성이 강력히 권고됩니다. 
+ 
+   - GitHub Enterprise Server 운영 중, 이중화 replica를 primary로 승격하는 경우, GitHub Actions을 위해 별도의 구성이나 작업이 필요하지 않습니다. 
+ 
+   
+### [2. Backup and restoring](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/advanced-configuration-and-troubleshooting/backing-up-and-restoring-github-enterprise-server-with-github-actions-enabled)
+ 
+   - GitHub Enterprise Server 자체의 백업과 이중화 구성은, 외부 S3 blob 스토리지의 백업 및 이중화는 제공하지 않습니다. 
+ 
+   - GitHub Action를 사용하던 instance의 백업데이터를, 신규 인스턴스에 restore할 때의 절차는 아래와 같습니다. 
+ 
+     1) 원래의 인스턴스가 오프라인임을 확인
+     2) 새로운 GHES 인스턴스의 네트웍 구성 설정. (네트웍 구성은 백업 스냅샷에 포함되지 않고, `ghe-restore` 명령으로도 덮어씌어 지지 않음)
+     3) 새로운 GHES 인스턴스에 이전 원래 인스턴스가 사용하던 동일한 외부 스토리지 등록
+     4) 새로운 GHES 인스턴스에 GitHub Actions 활성화
+     5) `ghe-restore` 명령으로 백업 데이터 복구
+     6) Self-hosted 러너 재등록
+ 
+ 
+ </p>
+ </details>
+
+
+<br/>
+
+
+# 7. Troublshooting, 로그파일
+
+<details><summary> </summary>
+ <p>
+
+### [1. GitHub Actions Troubleshooting](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/advanced-configuration-and-troubleshooting/troubleshooting-github-actions-for-your-enterprise) 
+  
+   - GHES에 Self-signed certificate 사용시 Self-hosted 러너 등록 : GHES는 공인된 기관에서 서명된 공인 인증서의 사용이 강력히 권장되지만, self-signed 인증서를 사용할 때 방법이 설명되어 있습니다. 
+  
+   - GitHub Actions를 위한 HTTP proxy 설정 
+     - GHES 인스턴스에 HTTP Proxy server가 구성되어 있다면, **HTTP Exclusion list**에 `localhost`와 `127.0.0.1`을 설정해야 합니다. 
+     - 이 설정이 되어 있지 않으면 `Resource unexpectedly moved to https://<IP_ADDRESS>`와 유사한 에러가 발생됩니다. 
+  
+   - hostname 변경 후 러너가 연결되지 않음
+     - GHES의 호스트네임을 변경하였다면, self-hosted러너들은 이전의 호스트네임으로 연결되지 않을 것입니다. 
+     - 이 경우, self-hosted 러너의 구성을 업데이트 해야 하며, 
+       - self-hosted 러너의 디렉토리에서 `.runner` 와 `.credentials` 파일에서 모든 예전 호스트네임을 새로운 호스트네임으로 변경하고, self-hosted 러너 어플리케이션을 재시작
+       - 또는, GHES로 부터 Self-hosted 러너를 삭제하고 다시 추가
+  
+   - 메모리, CPU 용량 제약으로 GitHub Actions와 Job이 멈췄을 때
+     - 과도한 Actions의 실행으로 메모리와 CPU 용량의 한도가 되었을 경우, (러너들이 idle한 것들이 있다해도) job들이 시작되지 않고 UI상에서 아무 변화가 없는 경우가 생길 수 있습니다. 
+     - 1. 관리 콘솔에서 CPU와 메모리 사용량 확인 
+     - 2. 관리 콘솔에서 Nomad jobs CPU/ 메모리 확인
+     - 3. 
+  
+### [2. Self-hosted 러너 Troublshooting, 로그파일](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/monitoring-and-troubleshooting-self-hosted-runners)
+  
+   - [Self-hoste runner 상태 확인](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/monitoring-and-troubleshooting-self-hosted-runners#checking-the-status-of-a-self-hosted-runner) : idle, Action, Offline
+  
+   <img src="https://user-images.githubusercontent.com/40287191/125399198-37ec8800-e3eb-11eb-84cc-e9500a6278ba.png" width="700" height="150">
+
+   
+   - Self-hosted 러너 로그 파일 : 로그파일은 러너 디렉토리 내부에 별도의 `_diag` 디렉토리에 생성되며, 러너 어플리케이션이 시작될 때 마다 새로운 로그가 생성됩니다. 
+     - __Runner_파일 : Self-hosted 러너의 어플리케이션과 동작에 대한 로그파일 
+     - __Worker_파일 : 각 job의 실행에 대한 로그 파일 
+   
+   - 리눅스 기반의 self-hosted 러너에서 service로 application을 실행할 때는 `journalctl`을 사용해 실시간 활동을 모니터링할 수 있습니다. 
+  
+   - self-hosted 러너에서의 컨테이너
+     - 도커 설치 확인 : `sudo systemctl is-active docker.service`
+     - 만약 job이 아래와 같은 에러메세지로 실패 한다면, 도커 permission 확인 
+     
+     ```
+      dial unix /var/run/docker.sock: connect: permission denied
+     ```
+      - self-hosted 러너의 서비스 account가 도커 서비스를 사용할 수 있는 권한 확인
+    
+     ```
+     $ sudo systemctl show -p User actions.runner.octo-org-octo-repo.runner01.service
+     User=runner-user
+     ```
+  
+   - [Self-hosted 러너 삭제](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/removing-self-hosted-runners)
+  
+ </p>
+ </details>
+
+
+<br/>
+
+
+# 8. 기타
+
+ <details><summary> </summary>
+ <p>
+
+   ### 1. Artifacts와 로그 저장 정책
+    
+   - artifact와 로그의 저장 기간은 [저장소별](https://docs.github.com/en/enterprise-server@3.1/github/administering-a-repository/configuring-the-retention-period-for-github-actions-artifacts-and-logs-in-your-repository), [조직별](https://docs.github.com/en/enterprise-server@3.1/organizations/managing-organization-settings/configuring-the-retention-period-for-github-actions-artifacts-and-logs-in-your-organization), 그리고 [enterprise에](https://docs.github.com/en/enterprise-server@3.1/github/setting-up-and-managing-your-enterprise/configuring-the-retention-period-for-github-actions-artifacts-and-logs-in-your-enterprise-account) 대해 설정할 수 있습니다. 
+    
+   - default로 90일간 저장됩니다. 
+  
+   - Public저장소에 대해서 저장 기간은 1~90일 범위에서 설정할 수 있습니다. 
+  
+   - Private, Internal, GitHub Enterprise 저장소들은 1~400일 범위에서 설정할 수 있습니다.
+  
+   - 저장기간 변경시, 새로운 artifact와 로그들에 대해서만 적용되며, 이전에 생성된 artifact와 로그들에는 소급적용되지 않습니다. 
+  
+   ### 2. Scheduled workflow들의 불필요한 실행 방지
+  
+   - 불필요한 workflow의 실행을 방지하기 위해, scheduled workflow들은 자동으로 disable될 수 있습니다. 
+  
+   - Public 저장소가 fork되었을 때, scheduled workflow들은 자동으로 disable되어 있습니다. 
+  
+   - Public 저장소들에 대해서, 60일간 아무런 repository activity가 없을 때, scheduled workflow들은 자동으로 disable 됩니다. 
+   
+ </p>
+ </details>
+
 ** 본 문서는 GitHub Enterprise Server 버젼 3.1을 기준으로 작성되었습니다. 
