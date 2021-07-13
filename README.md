@@ -257,10 +257,60 @@
        - 또는, GHES로 부터 Self-hosted 러너를 삭제하고 다시 추가
   
    - 메모리, CPU 용량 제약으로 GitHub Actions와 Job이 멈췄을 때
+     
      - 과도한 Actions의 실행으로 메모리와 CPU 용량의 한도가 되었을 경우, (러너들이 idle한 것들이 있다해도) job들이 시작되지 않고 UI상에서 아무 변화가 없는 경우가 생길 수 있습니다. 
-     - 1. 관리 콘솔에서 CPU와 메모리 사용량 확인 
-     - 2. 관리 콘솔에서 Nomad jobs CPU/ 메모리 확인
-     - 3. 
+     
+     - 1. [관리 콘솔에서 CPU와 메모리 사용량 확인](https://docs.github.com/en/enterprise-server@3.1/admin/enterprise-management/accessing-the-monitor-dashboard) 
+        
+       - Overall system health의 CPU와 메모리 사용량에 따라 [CPU, 메모리 용량 증설](https://docs.github.com/en/enterprise-server@3.1/admin/enterprise-management/increasing-cpu-or-memory-resources) 고려 <br>
+     
+     
+     - 2. 만약, CPU, 메모리 사용량에 문제가 없다면, Nomad Job 섹션에서 "CPU Percent Value"와 "Memory Usage" 그래프 확인
+        - Actions와 관련된 아래 서비스들 확인
+          ```
+          mps_frontend
+          mps_backend
+          token_frontend
+          token_backend
+          actions_frontend
+          actions_backend
+          ```
+        - 이러한 서비스들 중, CPU 100%에 근접하거나 메모리가 최대치(2GB by default)에 근접하는 것이 있다면, 리소스 할당을 증가할 필요가 있습니다. 
+  
+     - 3. 최대치에 근접한 서비스들에 대한 리소스 할당량 증가
+        - 1. SSH 관리 콘솔로 GHES 인스턴스에 접속
+        - 2. 아래 명령어로 추가 할당 가능한 리소스 확인
+           ```
+           nomad node status -self
+           ```
+        - 3. 위 명령어로 나온 결과에서 "Allocated Resources" 섹션 부분 확인
+           ```
+           Allocated Resources
+           CPU              Memory          Disk
+           7740/49600 MHZ   23 GiB/32 GiB   4.4 GiB/7.9 GiB
+           ```
+        - 4. `/etc/consul-templates/etc/nomad-jobs/actions` 디렉토리로 이동
+            - 이 디렉토리에는 Actions의 서비스에 관련된 아래 세가지 파일이 있습니다. 
+              ```
+              mps.hcl.ctmpl
+              token.hcl.ctmpl
+              actions.hcl.ctmpl
+              ```
+        - 5. 이 중, 위에서 확인된, 증가가 필요한 파일을 열어 `resource` 그룹 부분을 확인하고, CPU, 메모리 부분을 증가시킵니다.  
+           ```
+             resources {
+             cpu = 512
+             memory = 2048
+             network {
+               port "http" { }
+               }
+             }
+           ```
+        - 6. 파일을 저장하고 빠져 나옵니다. 
+        - 7. `ghe-config-apply` 명령을 실행하여 변경된 내용을 적용합니다. 
+           - 이 명령 실행 중 `failed to run nomad job '/etc/nomad-jobs/<name>.hcl'`와 같은 에러가 발생한다면, CPU나 메모리가 가용한 범위보다 초과되어 할당된 것입니다. 
+  
+        - 8. `ghe-actions-check`을 실행하여 Actions의 상태를 확인합니다. 
   
 ### [2. Self-hosted 러너 Troublshooting, 로그파일](https://docs.github.com/en/enterprise-server@3.1/actions/hosting-your-own-runners/monitoring-and-troubleshooting-self-hosted-runners)
   
