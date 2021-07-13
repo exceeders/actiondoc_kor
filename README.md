@@ -1,4 +1,3 @@
-p
 # GitHub Actions_gettingStarted on GitHub Enterprise Server
 ![image](https://user-images.githubusercontent.com/40287191/121128830-fa826100-c866-11eb-80be-55502d6a757f.png)
 - GA on GHES version 3.0
