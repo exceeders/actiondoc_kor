@@ -29,7 +29,7 @@
          <td> Linux, Windows, MacOS <br>  - physical, virtual, container, on-premises, or in a cloud </td>
         </tr>
         <tr>
-         <td> Virtual machine에 직접 동작 또는 Docker 컨테이터로 워크 플로우 동작 가능 </td>
+         <td> Virtual machine에 직접 동작 또는 Docker 컨테이너로 워크 플로우 동작 가능 </td>
          <td> GitHub Enterprise와 연결을 위한 "GitHub Actions runner 어플리케이션" 설치 후 실행 해야 함 </td>
         </tr>
         <tr>
