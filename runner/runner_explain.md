@@ -239,7 +239,7 @@
         - GitHub.com의 Actions download
         - Toolcache (setup-node, setup-python, setup-java,,) Action들의 패키지 다운로드
   
-      - Self-hosted Runner가 인터넷 연결이 불가할 시, 인터넷이 가능한 곳에서 다운로드하여 [수동으로 사용할 수 있는 방법](https://github.com/exceeders/Actions_gettingStarted#4-on-prem-%EC%82%AC%EC%9A%A9%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%84%A4%EC%A0%95-%EB%B0%8F-%EC%9D%B8%ED%84%B0%EB%84%B7-%EC%97%B0%EA%B2%B0%EC%9D%B4-%EB%B6%88%EA%B0%80%ED%95%9C-%EA%B2%BD%EC%9A%B0-%EC%82%AC%EC%9A%A9%EB%B0%A9%EB%B2%95)을 제공합니다.
+      - Self-hosted Runner가 인터넷 연결이 불가할 시, 인터넷이 가능한 곳에서 다운로드하여 [수동으로 사용할 수 있는 방법](https://docs.github.com/en/enterprise-server@3.1/admin/github-actions/managing-access-to-actions-from-githubcom/setting-up-the-tool-cache-on-self-hosted-runners-without-internet-access)을 제공합니다.
   
      
   <br/> 
