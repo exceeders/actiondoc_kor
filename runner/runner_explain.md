@@ -65,7 +65,7 @@
   <br/>
   
   2. [GitHub-hosted Runner 과금](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions#about-billing-for-github-actions)
-     - GitHub Enterprise는 기본적으로 **월별 50,000분/50GB Storage**가 포함되어 있습니다. 
+     - GitHub Enterprise는 기본적으로 **월별 50,000분/50GB Storage**(Actions/Packages용도)가 포함되어 있습니다. 
    
      - 초과되는 사용량에 대해서 아래와 같이 분당 ⏰ 과금됩니다. 
      <img src="https://user-images.githubusercontent.com/40287191/121186647-48688a80-c8a2-11eb-9874-45fd40619203.png" width="650" height="150">
