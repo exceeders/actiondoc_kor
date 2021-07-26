@@ -71,7 +71,7 @@
 7. [워크플로우 run 삭제](https://docs.github.com/en/enterprise-server@3.1/actions/managing-workflow-runs/deleting-a-workflow-run)
 
    - Action 탭 > 왼편 사이드바에서 워크플로우 클릭 > 오른편의 워크플로우 run 리스트에서 삭제하고자 하는 것 클릭
-     <img src="https://user-images.githubusercontent.com/40287191/123590278-66803580-d825-11eb-8e0b-559e01b806b2.png" width="600" height="150">
+     <img src="https://user-images.githubusercontent.com/40287191/123590278-66803580-d825-11eb-8e0b-559e01b806b2.png" width="750" height="150">
    
 <br/>
   
